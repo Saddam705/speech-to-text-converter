@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio to Text Converter</title>
+</head>
+<body>
+    <h1>Audio to Text Converter</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Upload Audio File:</label>
+        <input type="file" name="file" accept="audio/*" required>
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+        <h2>Transcription:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
